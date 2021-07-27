@@ -1,0 +1,13 @@
+#!/bin/bash
+
+target_file="/home/xansx/.config/bin/target.txt"
+
+if [ -z "$1" ]; then
+        echo -e "\t[!] Error: Missing IP"
+        echo -e "\tUsage: $0 ip"
+        exit 1
+fi
+
+polybar-msg cmd show &>/dev/null
+
+echo "$1" > "$target_file"

@@ -5,6 +5,17 @@ Configuración de entorno BSPWM para Parrot OS
 ![image](https://user-images.githubusercontent.com/73076414/127237787-caa591ca-f1c4-4379-8c29-723fce9bd9ca.png)
 ![image](https://user-images.githubusercontent.com/73076414/127238100-e0b5a131-4ae4-4d5e-acf3-bf04660fdc3a.png)
 
+## Utilidades:
+- **bspwm**: Tiling Window Manager (administrador de ventanas en mosaico). Autor: [baskerville](https://github.com/baskerville)
+- **sxhkd**: Es un "demonio" que escucha los eventos del teclado y ejecuta comandos. Autor: [baskerville](https://github.com/baskerville)
+- **polybar**: Herramienta rápida y fácil de usar para crear barras de estado.
+- **rofi**: Selector de ventana y lanzador de aplicaciones.
+- **feh**: Visor de imágenes ligero, configurable y versátil.
+- **Hack Nerd Font**: Fuente.
+- **fzf**: Buscador difuso de línea de comandos de propósito general. Autor: [junegunn](https://github.com/junegunn)
+- **whichSystem**:
+- **setTarget**:
+- **clearTarget**:
 
 ## Shortcuts (atajos de teclado)
 <kbd>Windows</kbd> + <kbd>Enter</kbd> : Abrir la consola (terminator).  

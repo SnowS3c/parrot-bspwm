@@ -1,6 +1,10 @@
 # PARROT BSPWM
 Configuración de entorno BSPWM para Parrot OS
 
+## Vista general
+![image](https://user-images.githubusercontent.com/73076414/127237787-caa591ca-f1c4-4379-8c29-723fce9bd9ca.png)
+
+
 ## Shortcuts (atajos de teclado)
 <kbd>Windows</kbd> + <kbd>Enter</kbd> : Abrir la consola (terminator).  
 <kbd>Windows</kbd> + <kbd>W</kbd> : Cerrar la ventana actual.  

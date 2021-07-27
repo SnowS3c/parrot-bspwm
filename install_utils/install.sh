@@ -1,5 +1,5 @@
 #!/bin/bash
-# ACTION: Install lsd, bat and mysql-client.
+# ACTION: Install lsd, bat, mysql-client, unzip rockyou.txt.
 # INFO: Install lsd, bat, mysql-client and create some aliases
 # DEFAULT: y
 
@@ -22,6 +22,8 @@ wget -O /usr/bin/whichSystem https://raw.githubusercontent.com/xansx/whichSystem
 
 cp -v "$base_dir/clearTarget" "$base_dir/setTarget" /usr/bin/
 chmod +x /usr/bin/clearTarget /usr/bin/setTarget
+
+gzip -d /usr/share/wordlists/rockyou.txt.gz
 
 # Config aliases for global (all users)
 echo -e "\e[1mSetting configs to all users...\e[0m"

@@ -1,4 +1,4 @@
-# parrot-bspwm
+# PARROT BSPWM
 Configuración de entorno BSPWM para Parrot OS
 
 ## Shortcuts (atajos de teclado)

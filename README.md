@@ -3,6 +3,7 @@ Configuración de entorno BSPWM para Parrot OS
 
 ## Vista general
 ![image](https://user-images.githubusercontent.com/73076414/127237787-caa591ca-f1c4-4379-8c29-723fce9bd9ca.png)
+![image](https://user-images.githubusercontent.com/73076414/127238100-e0b5a131-4ae4-4d5e-acf3-bf04660fdc3a.png)
 
 
 ## Shortcuts (atajos de teclado)

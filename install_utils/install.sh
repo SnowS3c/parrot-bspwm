@@ -1,6 +1,6 @@
 #!/bin/bash
-# ACTION: Install lsd and bat.
-# INFO: Install lsd and bat, and create some aliases
+# ACTION: Install lsd, bat and mysql-client.
+# INFO: Install lsd, bat, mysql-client and create some aliases
 # DEFAULT: y
 
 # Config variables
@@ -13,7 +13,10 @@ base_dir="$(dirname "$(readlink -f "$0")")"
 echo -e "\e[1mInstalling packages...\e[0m"
 dpkg -i "${base_dir}/lsd_0.20.1_amd64.deb"
 dpkg -i "${base_dir}/bat_0.18.2_amd64.deb"
-apt install -y scrub
+dpkg -i "${base_dir}/mysql-apt-config_0.8.18-1_all.deb"
+dpkg -i "${base_dir}/mysql-common_8.0.26-1debian10_amd64.deb"
+apt-get update
+apt install -y scrub mysql-client
 wget -O /usr/bin/ipsweep https://raw.githubusercontent.com/xansx/ipsweep/main/ipsweep.sh
 wget -O /usr/bin/whichSystem https://raw.githubusercontent.com/xansx/whichSystem/main/whichSystem.sh
 
@@ -30,7 +33,7 @@ for d in  /etc/skel/  /home/*/ /root/; do
 	git clone --depth 1 https://github.com/junegunn/fzf.git "$d/.fzf"
 	echo ".fzf/install -all" >> "$d/pendiente.txt"
 
-    chown -R $(stat "$(dirname "$d")" -c %u:%g) "$d/.fzf/"
+    chown -R $(stat "$d" -c %u:%g) "$d/.fzf/"
 
 done
 

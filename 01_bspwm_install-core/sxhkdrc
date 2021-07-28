@@ -124,12 +124,9 @@ super + ctrl + {Left,Down,Up,Right}
  
 # Custom move/resize
 alt + super + {Left,Down,Up,Right}
-    /home/xansx/.config/bspwm/scripts/bspwm_resize {west,south,north,east}
+    /home/username/.config/bspwm/scripts/bspwm_resize {west,south,north,east}
 
 # Open Firefox
 super + shift + f
     firejail /usr/bin/firefox
 
-# Slimlock
-#super + shift + x
-#    slimlock

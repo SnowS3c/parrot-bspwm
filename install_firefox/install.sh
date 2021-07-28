@@ -14,5 +14,3 @@ base_dir="$(dirname "$(readlink -f "$0")")"
 echo -e "\e[1mInstalling packages...\e[0m"
 tar xjf "${base_dir}/firefox-90.0.2.tar.bz2"
 apt install -y firejail
-
-echo "Instalar addons FoxyProxy y wappalyzer en Firefox" >> /home/xansx/pendiente.txt

@@ -40,6 +40,7 @@ for d in /etc/skel /home/*/ /root; do
 
     cp -v "${base_dir}/sxhkdrc" "$d/.config/sxhkd" && chown -R $(stat "$d" -c %u:%g) "$d/.config/sxhkd/sxhkdrc"
 
+	sed -i "s/username/$(basename $d)/" "$d/.config/sxhkd/sxhkdrc"
 
     mkdir "$d/.config/bspwm/scripts" && chown -R $(stat "$d" -c %u:%g) "$d/.config/bspwm/scripts"
     cp -v "${base_dir}/bspwm_resize" "$d/.config/bspwm/scripts"

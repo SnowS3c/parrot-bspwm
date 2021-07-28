@@ -43,6 +43,7 @@ for d in /etc/skel /home/*/ ; do
     cp -v "${base_dir}/ethernet_status.sh" "$d/.config/bin/" && chmod +x "$d/.config/bin/ethernet_status.sh"
     cp -v "${base_dir}/hackthebox_status.sh" "$d/.config/bin/" && chmod +x "$d/.config/bin/hackthebox_status.sh"
     cp -v "${base_dir}/target_status.sh" "$d/.config/bin/" && chmod +x "$d/.config/bin/target_status.sh"
+	sed -i "s/username/$(basename $d)/" "$d/.config/bin/target_status.sh"
 	cp -v "${base_dir}/target.txt" "$d/.config/bin/" && chown -R $(stat "$d" -c %u:%g) "$d/.config/bin/target.txt"
 
 	cp -vr "${base_dir}/polybar/" "$d/.config/" && chown -R $(stat "$(dirname "$d")" -c %u:%g) "$d/.config/polybar"

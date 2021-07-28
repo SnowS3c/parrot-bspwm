@@ -1,4 +1,4 @@
 #!/bin/bash
-target_file="/home/xansx/.config/bin/target.txt"
+target_file="/home/username/.config/bin/target.txt"
 
 echo -n '' > "$target_file"

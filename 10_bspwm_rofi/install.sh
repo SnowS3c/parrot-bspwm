@@ -18,5 +18,5 @@ for d in /etc/skel/ /home/*/ /root/; do
 	[ "$(dirname "$d")" = "/home" ] && ! id "$(basename "$d")" &>/dev/null && continue  # Skip dirs that no are homes 
 
 	cp -vr "${base_dir}/rofi" "$d/.config/" && chown -R $(stat "$d" -c %u:%g) "$d/.config/rofi"
-	sed -i "s/username/$(basename $d)/" "$d/.config/rofi"
+	sed -i "s/username/$(basename $d)/" "$d/.config/rofi/config"
 done

@@ -17,8 +17,10 @@ dpkg -i "${base_dir}/mysql-apt-config_0.8.18-1_all.deb"
 dpkg -i "${base_dir}/mysql-common_8.0.26-1debian10_amd64.deb"
 apt-get update
 apt install -y scrub mysql-client python2
+
 wget -O /usr/bin/ipsweep https://raw.githubusercontent.com/xansx/ipsweep/main/ipsweep.sh
 wget -O /usr/bin/whichSystem https://raw.githubusercontent.com/xansx/whichSystem/main/whichSystem.sh
+chmod +x /usr/bin/ipsweep /usr/bin/whichSystem
 
 cp -v "$base_dir/clearTarget" "$base_dir/setTarget" /usr/bin/
 # Add user 1000 to target_file path

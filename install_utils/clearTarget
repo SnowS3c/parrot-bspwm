@@ -1,4 +1,0 @@
-#!/bin/bash
-target_file="/home/username/.config/bin/target.txt"
-
-echo -n '' > "$target_file"

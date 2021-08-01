@@ -28,3 +28,20 @@ function extractPorts(){
     echo -e "[*] Ports copied to clipboard\n"  >> extractPorts.tmp
     cat extractPorts.tmp; rm extractPorts.tmp
 }
+
+# Set target bar
+function setTarget(){
+    if [ -z "$1" ]; then
+        echo -e "\t[!] Error: Missing IP"
+        echo -e "\tUsage: setTarget ip"
+    else
+        target="$1"
+        echo -n "$1" > ~/.config/bin/target.txt
+    fi
+
+}
+
+# Clear target bar
+function clearTarget(){
+    echo -n '' > ~/.config/bin/target.txt
+}

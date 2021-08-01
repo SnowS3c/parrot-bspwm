@@ -22,12 +22,6 @@ wget -O /usr/bin/ipsweep https://raw.githubusercontent.com/xansx/ipsweep/main/ip
 wget -O /usr/bin/whichSystem https://raw.githubusercontent.com/xansx/whichSystem/main/whichSystem.sh
 chmod +x /usr/bin/ipsweep /usr/bin/whichSystem
 
-cp -v "$base_dir/clearTarget" "$base_dir/setTarget" /usr/bin/
-# Add user 1000 to target_file path
-user=$(cat /etc/passwd | cut -f 1,3 -d: | grep :1000$ | cut -f1 -d:)
-[ "$user" ] && sed -i "s/username/$user/" /usr/bin/clearTarget /usr/bin/setTarget
-chmod +x /usr/bin/clearTarget /usr/bin/setTarget
-
 gzip -d /usr/share/wordlists/rockyou.txt.gz
 
 python2 "${base_dir}/get-pip.py"

@@ -35,7 +35,6 @@ function setTarget(){
         echo -e "\t[!] Error: Missing IP"
         echo -e "\tUsage: setTarget ip"
     else
-        target="$1"
         echo -n "$1" > ~/.config/bin/target.txt
     fi
 

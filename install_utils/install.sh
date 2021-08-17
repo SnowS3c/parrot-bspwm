@@ -1,5 +1,5 @@
 #!/bin/bash
-# ACTION: Install lsd, bat, mysql-client, rockyou.txt, python2, pip2.
+# ACTION: Install lsd, bat, mysql-client, rockyou.txt, python2, pip2, exploitdb.
 # INFO: Install lsd, bat, mysql-client and create some aliases
 # DEFAULT: y
 
@@ -9,14 +9,14 @@ base_dir="$(dirname "$(readlink -f "$0")")"
 # Check root
 [ "$(id -u)" -ne 0 ] && { echo "Must run as root" 1>&2; exit 1; }
 
-# Install tmux
+# Install packages
 echo -e "\e[1mInstalling packages...\e[0m"
 dpkg -i "${base_dir}/lsd_0.20.1_amd64.deb"
 dpkg -i "${base_dir}/bat_0.18.2_amd64.deb"
 dpkg -i "${base_dir}/mysql-apt-config_0.8.18-1_all.deb"
 dpkg -i "${base_dir}/mysql-common_8.0.26-1debian10_amd64.deb"
 apt-get update
-apt install -y scrub mysql-client python2
+apt install -y scrub mysql-client python2 exploitdb
 
 wget -O /usr/bin/ipsweep https://raw.githubusercontent.com/xansx/ipsweep/main/ipsweep.sh
 wget -O /usr/bin/whichSystem https://raw.githubusercontent.com/xansx/whichSystem/main/whichSystem.sh
